@@ -1,0 +1,50 @@
+:root {
+  --transparent: #45155a00;
+  --light: #00000029;
+  --dark: #45155a; /* apenas na fonte com fundo claro */
+
+  --white: #fff;
+  --gray: #707070;
+  --grey: #707070; /* pra não dar confusão */
+  --black: #100515;
+
+  --yellow: #fff500;
+  --purple-light: #8c1ac1;
+  --purple: #641289;
+  --purple-dark: #45155a;
+}
+
+html,
+body,
+body * {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--purple-dark);
+
+  &::before {
+    content: "";
+    position: fixed;
+    display: block;
+    top: 0;
+    z-index: -1;
+    height: 0;
+    width: 100%;
+    box-shadow: 0 0 6rem 5rem var(--black);
+  }
+}
+body * {
+  color: #fff;
+}
