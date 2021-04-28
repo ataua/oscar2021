@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import { useContext } from 'react'
-import { Login, MovieList } from '../components'
+import { Admin, MovieList } from '../components'
 import { Context } from '../context'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 
 const Home = () => {
   const { user } = useContext(Context)
@@ -12,14 +12,17 @@ const Home = () => {
         <title>{
           user?.token
             ? 'Oscar 2021 | Movies'
-            : 'Oscar 2021 | Login'
+            : 'Oscar 2021 | Admin'
         }</title>
       </Head>
-      {
-        user?.token
-          ? <MovieList />
-          : <Login />
-      }
+      <main className={styles.content}>
+        <h1>Oscar 2021</h1>
+        {
+          user?.token
+            ? <MovieList />
+            : <Admin />
+        }
+      </main>
     </>
   )
 }

@@ -1,0 +1,42 @@
+.container {
+  width: 536px;
+  margin: 140px auto 0;
+  padding: 16px;
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: stretch;
+    margin: 2rem;
+
+    button {
+      line-height: 2rem;
+      text-align: center;
+
+      h2 {
+        display: inline-block;
+        transition: color 0.3s ease-out;
+
+        &:hover {
+          cursor: pointer;
+          color: var(--yellow);
+        }
+      }
+
+      &:first-of-type::after {
+        content: "|";
+        font-size: 24px;
+        float: right;
+        margin: auto;
+        color: white;
+      }
+    }
+  }
+
+  main {
+    width: 100%;
+    display: grid;
+    place-content: center;
+    justify-content: stretch;
+  }
+}

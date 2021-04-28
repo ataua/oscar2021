@@ -1,5 +1,7 @@
 import { GetStaticProps } from 'next'
 import { api } from '../../services/api'
+import { Button } from '../atoms'
+import styles from './styles.module.scss'
 
 type Movie = {
   title: string
@@ -10,37 +12,30 @@ type Movie = {
   url: string
 }
 
-const tempList = [{
-  title: 'El Filmo',
-  description: 'um filme',
-  img: 'nonon.jpg',
-  rating: 4,
-  cathegory: 'coisa',
-  url: 'http:www'
-}]
-
 export const getStaticProps: GetStaticProps = async () => {
   const movieData: Movie[] = await api.get('oscar')
-  console.log(movieData)
 
-  // return {
-  //   props: { movieData }, // will be passed to the page component as props,
-  //   revalidate: 60 * 60 * 24 // update once a day
-  // }
   return {
-    props: { movieData: tempList }, // will be passed to the page component as props,
+    props: { movieData }, // will be passed to the page component as props,
     revalidate: 60 * 60 * 24 // update once a day
   }
 }
 
-const MovieList = () => {
+export const MovieList = ({ movieData }) => {
   return (
-    <>
-      <h1>Oscar 2021</h1>
-      {tempList.map(movie => {
-        <p key={movie.title}>{movie.title}</p>
-      })}
-    </>
+    <div className={styles.content}>
+      <main>
+        {movieData.map(movie => {
+          <p key={movie.title}>{movie.title}</p>
+        })}
+      </main>
+      <footer>
+        <h2>Filtre por qualificação do portal</h2>
+        <div>
+          <Button>abaixo da média</Button>
+          <Button>acima da média</Button>
+        </div>
+      </footer>
+    </div>
   )
 }
-export default MovieList

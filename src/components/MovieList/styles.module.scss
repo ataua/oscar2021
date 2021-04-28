@@ -1,0 +1,7 @@
+.content {
+  main {
+    display: flex;
+    gap: 1px;
+    column-count: calc(int(100vw / 537));
+  }
+}

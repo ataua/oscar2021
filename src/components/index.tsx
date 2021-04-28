@@ -1,4 +1,4 @@
-import Login from './Login'
-import MovieList from './MovieList'
+import { MovieList } from './MovieList'
+import { Admin } from './Admin'
 
-export { Login, MovieList }
+export { Admin, MovieList }
