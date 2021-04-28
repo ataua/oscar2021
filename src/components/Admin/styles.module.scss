@@ -12,6 +12,17 @@
     button {
       line-height: 2rem;
       text-align: center;
+      background: transparent;
+      outline: none;
+      border: none;
+
+      &:first-of-type::after {
+        content: "|";
+        font-size: 24px;
+        float: right;
+        margin: auto;
+        color: white;
+      }
 
       h2 {
         display: inline-block;
@@ -21,14 +32,6 @@
           cursor: pointer;
           color: var(--yellow);
         }
-      }
-
-      &:first-of-type::after {
-        content: "|";
-        font-size: 24px;
-        float: right;
-        margin: auto;
-        color: white;
       }
     }
   }

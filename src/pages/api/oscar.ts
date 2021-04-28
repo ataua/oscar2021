@@ -1,14 +1,23 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import type { NextApiRequest, NextApiResponse } from 'next'
+export default (req: NextApiRequest, res: NextApiResponse) => {
+  const file = '../../data/oscar.json'
+  const data = require(file)
 
-export default (req, res) => {
   if (req.method === 'GET') {
-    const data = require('../../data/oscar.json')
     console.log(data)
-    res.status(200).json(data)
+    return res.status(200).json(data)
   }
 
   if (req.method === 'POST') {
-    res.status(200).json({ msg: 'Post method' })
+    const fs = require('fs')
+    data.push(req.body)
+    const movieList = JSON.stringify(data)
+    try {
+      fs.writeFileSync(file, movieList)
+      return res.status(201).json({ msg: 'Criado' })
+    } catch (err) {
+      return res.status(500).json({ msg: 'Não foi possível salvar' })
+    }
   }
 
 }

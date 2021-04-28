@@ -1,52 +1,51 @@
 import { useContext } from 'react'
 import { Context, userActions } from '../../context'
-import { Button, Input } from '../atoms'
+import { Button, Label, Error } from '../atoms'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
+
+const schema = yup.object().shape({
+  email: yup.string().required({ message: 'Campo obrigatório' }),
+  password: yup.string().required({ message: 'Campo obrigatório' }),
+});
 
 type User = {
   email: string
   password: string
 }
 
-type UpdateUser = ({ action: string, user: User }) => boolean
-
-const schema = yup.object().shape({
-  email: yup.string().required({ msg: 'Campo obrigatório' }),
-  password: yup.string().required({ msg: 'Campo obrigatório' }),
-});
-
 export const Login = () => {
   const { updateUser } = useContext(Context)
-  const { register, handleSubmit, formState: { errors }, watch } = useForm({
+  const { register, handleSubmit, formState: { errors }, watch } = useForm<User>({
     resolver: yupResolver(schema)
   })
 
-  const formLogin = () => {
-    updateUser({
+  const formLogin = async () => {
+    console.log(watch())
+    await updateUser({
       action: userActions.LOGIN,
       user: watch()
     })
   }
 
   return (
-    <>
-      <form onSubmit={() => handleSubmit(formLogin)}>
-        <Input
+    <form method='post' onChange={() => console.log(watch())}>
+      <Label text='email'>
+        <input
           type='email'
-          label='email'
           {...register('email')}
         />
-        <p>{errors.email?.message}</p>
-        <Input
+      </Label>
+      <Error>{errors.email?.message}</Error>
+      <Label text='password'>
+        <input
           type='password'
-          label='password'
           {...register('password')}
         />
-        <p>{errors.password?.message}</p>
-        <Button type='submit'>Login</Button>
-      </form>
-    </>
+      </Label>
+      <Error>{errors.password?.message}</Error>
+      <Button onClick={() => handleSubmit(formLogin)}>Login</Button>
+    </form>
   )
 }

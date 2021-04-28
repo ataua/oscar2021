@@ -9,12 +9,12 @@ export const Admin = () => {
   return (
     <div className={styles.container}>
       <header>
-        <div className={styles.button} onClick={() => setActive(true)}>
+        <button onClick={() => setActive(true)}>
           <h2>Login</h2>
-        </div>
-        <div className={styles.button} onClick={() => setActive(false)}>
+        </button>
+        <button onClick={() => setActive(false)}>
           <h2>Registro</h2>
-        </div>
+        </button>
       </header>
       <main>
         {

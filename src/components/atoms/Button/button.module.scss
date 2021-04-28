@@ -1,0 +1,19 @@
+.btn {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px 8px 6px 6px;
+
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 266px;
+  line-height: 2rem;
+
+  text-transform: uppercase;
+  font-weight: bold;
+  background: var(--purple-light);
+  border: 0;
+
+  * {
+    flex: 0 1 2rem;
+  }
+}

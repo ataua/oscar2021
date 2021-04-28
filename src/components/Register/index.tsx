@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { Context, userActions } from '../../context'
-import { Button, Input, Error } from '../atoms'
+import { Button, Label, Error } from '../atoms'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
@@ -21,12 +21,15 @@ const schema = yup.object().shape({
 
 export const Register = () => {
   const { updateUser } = useContext(Context)
-  const { register, handleSubmit, formState: { errors }, watch } = useForm({
+  const { register, formState: { errors }, watch } = useForm({
     resolver: yupResolver(schema)
   })
 
-  const formRegister = () => {
+  const formRegister = (e) => {
+    e.preventDefault()
     watch().isValid
+    console.log(watch())
+    debugger
     updateUser({
       action: userActions.REGISTER,
       user: watch()
@@ -34,30 +37,36 @@ export const Register = () => {
   }
 
   return (
-    <>
-      <form onSubmit={() => handleSubmit(formRegister)}>
-        <Input
+    <form onSubmit={formRegister}>
+      <Label text='nome'>
+        <input
           type='text'
-          label='nome'
-          {...register('name')} />
-        <Error>{errors.text?.message}</Error>
-        <Input
+          {...register('name')}
+        />
+      </Label>
+      <Error>{errors.text?.message}</Error>
+      <Label text='email'>
+        <input
           type='email'
-          label='email'
-          {...register('email')} />
-        <Error>{errors.email?.message}</Error>
-        <Input
+          {...register('email')}
+        />
+      </Label>
+      <Error>{errors.email?.message}</Error>
+      <Label text='password'>
+        <input
           type='password'
-          label='password'
-          {...register('password')} />
-        <Error>{errors.password?.message}</Error>
-        <Input
+          {...register('password')}
+        />
+      </Label>
+      <Error>{errors.password?.message}</Error>
+      <Label text='repita o password'>
+        <input
           type='password'
-          label='repita o password'
-          {...register('password2')} />
-        <Error>{errors.password?.message}</Error>
-        <Button type='submit'>Registro</Button>
-      </form>
-    </>
+          {...register('password2')}
+        />
+      </Label>
+      <Error>{errors.password?.message}</Error>
+      <Button type='submit'>Registro</Button>
+    </form>
   )
 }
