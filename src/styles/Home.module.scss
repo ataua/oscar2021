@@ -5,3 +5,35 @@
     margin-top: 2em;
   }
 }
+
+.message {
+  position: absolute;
+  display: none;
+  top: 1rem;
+  margin: auto;
+  z-index: 10;
+
+  height: 4rem;
+  line-height: 4rem;
+  width: 20rem;
+  border-radius: 15px;
+
+  transition: display 0.3s;
+}
+
+.success {
+  display: grid;
+  place-items: center;
+  background: green;
+}
+.warning {
+  display: grid;
+  place-items: center;
+  background: var(--yellow);
+  color: var(--dark);
+}
+.error {
+  display: grid;
+  place-items: center;
+  background: red;
+}

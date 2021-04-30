@@ -6,6 +6,7 @@ type Movie = {
   cathegory: string
   url: string
 }
+
 type MovieList = Movie[]
 type MoviePayload = {
   action: string,
@@ -13,21 +14,25 @@ type MoviePayload = {
 }
 
 type User = {
-  name?: string
-  token?: string
-  email?: string
+  email: string
   password?: string
 }
+
 type UserPayload = {
   action: string
   user: User
 }
 
-type ContextType = {
-  user: User
-  updateUser: ({ action, user }: UserPayload) => boolean
-  movieList: MovieList
-  updateMovieList: ({ action, movie }: MoviePayload) => boolean
+type Message = {
+  type: string | null
+  text: string
 }
 
-export type { Movie, MovieList, MoviePayload, User, UserPayload, ContextType }
+type ContextType = {
+  user: User
+  updateUser: ({ action, user }: UserPayload) => any
+  message: Message
+  showMessage: (msg: Message) => void
+}
+
+export type { Message, Movie, MovieList, MoviePayload, User, UserPayload, ContextType }

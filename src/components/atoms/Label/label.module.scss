@@ -4,7 +4,6 @@
   padding: 16px;
   color: var(--purple-dark);
   text-transform: uppercase;
-  border-bottom: 2px solid var(--purple);
 
   &:visited {
     color: var(--purple-dark);
@@ -14,7 +13,20 @@
   input {
     background: transparent;
     font-size: 16px;
+    line-height: 1.5rem;
     border: 0;
+    border-bottom: 2px solid var(--purple);
     width: 100%;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    --active: #275efe;
+    --active-inner: #ccc;
+
+    &:-internal-autofill-selected {
+      background-color: transparent !important;
+      color: var(--purple-dark) !important;
+      border: 0;
+    }
   }
 }
