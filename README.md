@@ -21,7 +21,8 @@ O comando acima roda a aplicação no endereço [http://localhost:3000](http://l
 
 Além disso, é servida uma api RESTful na rota [http://localhost:3000/api](http://localhost:3000/api)*, que fornecerá o endpoint para as requisições de administrador -- não foi utilizado banco de dados, como SQlite ou Postgres, por conta do escopo do projeto, que visa apenas o front-end, mas, com um pouco mais de tempo, seria possível implementar essa funcionalidade. Atualmente, os dados estão armazenados em um arquivo `JSON`.  
 
-*(Talvez eu coloque esse conteúdo no Vercel, nesse caso o endereço será o endereço base do projeto no Vercel, e, no caso dos endpoits, + /api/new ou /api/connect)
+*Tentei fazer o deply no ___Vercel___, mas a documentação do ___Next___ já dizia que o servidor não iria funcionar. Tentei mesmo assim.  
+Não funcionou.
 
 ## Endpoints
 ---
