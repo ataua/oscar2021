@@ -1,7 +1,31 @@
 .content {
   main {
-    display: flex;
-    gap: 1px;
-    column-count: calc(int(100vw / 537));
+    margin: 0 auto;
+    columns: calc(int(100vw / 536) 536px);
+    gap: 2px;
+    column-rule: 2px solid white;
+    z-index: -5;
+    padding-top: 200px;
+  }
+  .empty {
+    content: "";
+    height: 450px;
+    display: block;
+    clear: both;
+    // width: 536px;
+  }
+  footer {
+    display: grid;
+    flex: column nowrap;
+    justify-items: center;
+    margin: 6rem auto;
+
+    div {
+      display: flex;
+
+      button {
+        margin: 2rem;
+      }
+    }
   }
 }

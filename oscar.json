@@ -3,7 +3,23 @@
     "title": "Mank",
     "description": "Um filme com o Gary Oldman",
     "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/mank_480x.progressive.jpg?v=1619192144",
-    "rating": "7",
+    "rating": "4",
+    "cathegory": "Doido",
+    "url": "https://www.imdb.com/title/tt10618286/?ref_=fn_al_tt_1"
+  },
+  {
+    "title": "Nomadland",
+    "description": "Esse filme foi o vencedor do Oscar 2021 de melhor filme. Então deve ser bom mesmo.",
+    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/nomadland_0qphi0xz_480x.progressive.jpg?v=1614277496",
+    "rating": "3",
+    "cathegory": "Não sei, não assisti",
+    "url": "https://www.imdb.com/title/tt9770150/?ref_=fn_al_tt_1"
+  },
+  {
+    "title": "Mank",
+    "description": "Um filme com o Gary Oldman",
+    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/mank_480x.progressive.jpg?v=1619192144",
+    "rating": "2",
     "cathegory": "Doido",
     "url": "https://www.imdb.com/title/tt10618286/?ref_=fn_al_tt_1"
   },
@@ -11,7 +27,7 @@
     "title": "Mank",
     "description": "Um filme com o Gary Oldman",
     "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/mank_480x.progressive.jpg?v=1619192144",
-    "rating": "7",
+    "rating": "5",
     "cathegory": "Doido",
     "url": "https://www.imdb.com/title/tt10618286/?ref_=fn_al_tt_1"
   },
@@ -19,7 +35,23 @@
     "title": "Mank",
     "description": "Um filme com o Gary Oldman",
     "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/mank_480x.progressive.jpg?v=1619192144",
-    "rating": "7",
+    "rating": "2",
+    "cathegory": "Doido",
+    "url": "https://www.imdb.com/title/tt10618286/?ref_=fn_al_tt_1"
+  },
+  {
+    "title": "Nomadland",
+    "description": "Esse filme foi o vencedor do Oscar 2021 de melhor filme. Então deve ser bom mesmo.",
+    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/nomadland_0qphi0xz_480x.progressive.jpg?v=1614277496",
+    "rating": "3",
+    "cathegory": "Não sei, não assisti",
+    "url": "https://www.imdb.com/title/tt9770150/?ref_=fn_al_tt_1"
+  },
+  {
+    "title": "Mank",
+    "description": "Um filme com o Gary Oldman",
+    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/mank_480x.progressive.jpg?v=1619192144",
+    "rating": "2",
     "cathegory": "Doido",
     "url": "https://www.imdb.com/title/tt10618286/?ref_=fn_al_tt_1"
   },
@@ -27,7 +59,7 @@
     "title": "Mank",
     "description": "Um filme com o Gary Oldman",
     "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/mank_480x.progressive.jpg?v=1619192144",
-    "rating": "7",
+    "rating": "4",
     "cathegory": "Doido",
     "url": "https://www.imdb.com/title/tt10618286/?ref_=fn_al_tt_1"
   },
@@ -35,48 +67,16 @@
     "title": "Mank",
     "description": "Um filme com o Gary Oldman",
     "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/mank_480x.progressive.jpg?v=1619192144",
-    "rating": "7",
+    "rating": "5",
     "cathegory": "Doido",
     "url": "https://www.imdb.com/title/tt10618286/?ref_=fn_al_tt_1"
   },
   {
-    "title": "Mank",
-    "description": "Um filme com o Gary Oldman",
-    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/mank_480x.progressive.jpg?v=1619192144",
-    "rating": "7",
-    "cathegory": "Doido",
-    "url": "https://www.imdb.com/title/tt10618286/?ref_=fn_al_tt_1"
-  },
-  {
-    "title": "Mank",
-    "description": "Um filme com o Gary Oldman",
-    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/mank_480x.progressive.jpg?v=1619192144",
-    "rating": "7",
-    "cathegory": "Doido",
-    "url": "https://www.imdb.com/title/tt10618286/?ref_=fn_al_tt_1"
-  },
-  {
-    "title": "Mank",
-    "description": "Um filme com o Gary Oldman",
-    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/mank_480x.progressive.jpg?v=1619192144",
-    "rating": "7",
-    "cathegory": "Doido",
-    "url": "https://www.imdb.com/title/tt10618286/?ref_=fn_al_tt_1"
-  },
-  {
-    "title": "Mank",
-    "description": "Um filme com o Gary Oldman",
-    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/mank_480x.progressive.jpg?v=1619192144",
-    "rating": "7",
-    "cathegory": "Doido",
-    "url": "https://www.imdb.com/title/tt10618286/?ref_=fn_al_tt_1"
-  },
-  {
-    "title": "Mank",
-    "description": "Um filme com o Gary Oldman",
-    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/mank_480x.progressive.jpg?v=1619192144",
-    "rating": "7",
-    "cathegory": "Doido",
-    "url": "https://www.imdb.com/title/tt10618286/?ref_=fn_al_tt_1"
+    "title": "Nomadland",
+    "description": "Esse filme foi o vencedor do Oscar 2021 de melhor filme. Então deve ser bom mesmo.",
+    "poster": "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/nomadland_0qphi0xz_480x.progressive.jpg?v=1614277496",
+    "rating": "1",
+    "cathegory": "Não sei, não assisti",
+    "url": "https://www.imdb.com/title/tt9770150/?ref_=fn_al_tt_1"
   }
 ]

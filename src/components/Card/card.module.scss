@@ -1,0 +1,38 @@
+.card {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 536px;
+  margin: 100px 16px;
+  float: left;
+
+  &:first-of-type {
+    padding-top: -1200px;
+  }
+
+  h3,
+  p {
+    margin-top: 1rem;
+
+    &.cathegory {
+      font-weight: 600;
+    }
+  }
+
+  .rating {
+    display: grid;
+    place-content: center;
+    margin-top: 1rem;
+    width: 61px;
+    height: 61px;
+    border-radius: 6px;
+    background: var(--yellow);
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+  .buttonDiv {
+    text-align: left;
+  }
+}

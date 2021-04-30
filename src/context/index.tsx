@@ -17,18 +17,18 @@ export const contextValues = () => {
   const [user, setUser] = useState(noUser)
   const [message, setMessage] = useState(defaultMessage)
 
-  const updateUser = async ({ action, user }: UserPayload) => {
+  const updateUser = ({ action, user }: UserPayload) => {
     const { REGISTER, LOGIN } = userActions
 
     switch (action) {
 
       case REGISTER:
-        await api
+        api
           .post('/adm/new', user)
           .then(res => { res.status })
 
       case LOGIN:
-        await api
+        api
           .post('/adm/connect', user)
           .then(({ status, data }) => {
             if (status === 200) {
@@ -41,7 +41,7 @@ export const contextValues = () => {
 
   const showMessage = (msg: Message) => {
     setMessage(msg)
-    setTimeout(setMessage, 5000, defaultMessage)
+    setTimeout(setMessage, 3000, defaultMessage)
   }
 
   return {

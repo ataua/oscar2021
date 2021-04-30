@@ -1,43 +1,39 @@
 import { useState } from 'react'
 import { Button } from '../atoms'
+import { Card } from '../'
 import Image from 'next/image'
 import styles from './styles.module.scss'
-import MovieData from 'oscar.json'
+import movieData from 'oscar.json'
 
 const calcAverage = (listToReduce) => {
-  const values = listToReduce.map(item => item.rating)
+  const values = listToReduce.map(item => parseInt(item.rating))
   const avrg = values.reduce((a, b) => (a + b)) / values.length
   return avrg
 }
 
 export const MovieList = () => {
-  const [filtered, setFiltered] = useState(MovieData)
+  const [filtered, setFiltered] = useState(movieData)
 
   const filterUnderRated = () => {
-    const average = calcAverage(MovieData)
-    const newData = MovieData.filter(movie => movie.rating <= average)
+    const average = calcAverage(movieData)
+    const newData = movieData.filter(movie => movie.rating <= average)
     setFiltered(newData)
   }
 
   const filterOverRated = () => {
-    const average = calcAverage(MovieData)
-    const newData = MovieData.filter(movie => movie.rating >= average)
+    const average = calcAverage(movieData)
+    const newData = movieData.filter(movie => movie.rating >= average)
     setFiltered(newData)
   }
-
+  console.table(filtered)
   return (
     <div className={styles.content}>
       <main>
-        {filtered.map((movie) => {
-          <div key={movie.title}>
-            <p>{movie.title}</p>
-            <Image src={movie.img} height={198} width={293} objectFit='cover' />
-            <p>{movie.description}</p>
-            <div className={styles.rating}>{movie.rating}</div>
-            <p className={styles.cathegory}>{movie.cathegory}</p>
-            <a href={movie.url} rel='noreferrer noopener' ></a>
-          </div>
-        })}
+        <div className={styles.empty} />
+        {filtered.map((movie, idx) =>
+          <Card key={idx} {...movie} />
+        )}
+        <div className={styles.empty} />
       </main>
       <footer>
         <h2>Filtre por qualificação do portal</h2>

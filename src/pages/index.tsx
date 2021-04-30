@@ -21,9 +21,9 @@ const Home = () => {
             : 'Oscar 2021 | Movies'
         }</title>
       </Head>
-      {message && <div className={style}>{message.text}</div>}
+      <h1 className={styles.h}>Oscar 2021</h1>
       <main className={styles.content}>
-        <h1>Oscar 2021</h1>
+        {message && <div className={style}>{message.text}</div>}
         {
           user.email == ''
             ? <Admin />

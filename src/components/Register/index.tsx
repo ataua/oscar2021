@@ -44,7 +44,6 @@ export const Register = () => {
       user
     })
 
-    console.log(res)
     reset(emptyUser)
     switch (res) {
       case 201:
